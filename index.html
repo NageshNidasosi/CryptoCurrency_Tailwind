@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#130a27] text-white ">
+    <!-- Nav Bar Section -->
+
+    <nav class="bg-[#10031c] md:h-[56px] h-fit flex md:justify-around">
+        <div class="h-auto w-auto pl-10 pt-2 md:pl-26 md:pt-2 flex">
+            <img class="w-15 h-12" src="./logo.png" alt="logo was there">
+            <span class="font-Raleway text-3xl pt-1 pl-2">CryptEx</span>
+        </div>
+        <div
+            class=" navLinks md:static absolute md:h-fit md:w-auto h-[380px] bg-[#10031c] md:bg-[#0b0213] w-full md:pl-0  top-[-100%]">
+            <ul
+                class="  md:text-lg md:flex md:flex-row md:w-auto md:gap-10 md:pt-3 flex flex-col gap-10 pt-16 items-center text-xl">
+                <li class=" hover:font-semibold hover:text-[#9958d6]"><a href="#market">Market</a></li>
+                <li class="hover:font-semibold hover:text-[#9958d6]"><a href="#two">Features</a></li>
+                <li class="hover:font-semibold hover:text-[#9958d6]"><a href="#About Us">About Us</a></li>
+                <li class="hover:font-semibold hover:text-[#9958d6]"><a href="#guidlines">Guidlines</a></li>
+            </ul>
+        </div>
+        <div class="md:hidden pl-[40vw] my-3">
+            <button>
+                <ion-icon class="text-xl" onclick="toggleMenu(this)" name="grid-outline"></ion-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cover page and heading Section -->
+
+    <div class="md:flex md:flex-row gap-10 md:pt-12 pt-5 pr-8 flex flex-col">
+        <div class=" flex-[50%] flex justify-center items-center md:text-8xl text-4xl font-Noto font-semibold">
+            <h1>Buy & <br> Sell <span id="element" class="font-Noto text-[#9958d6]"></span></h1>
+
+        </div>
+        <div class="h-auto flex-[50%] md:pt-6">
+            <img class=" md:ml-0 ml-4 " src="./hero-banner.png" alt="">
+        </div>
+    </div>
+
+    <!-- Download from Google and App Store -->
+    <div class="flex gap-3 pt-7 md:pt-0  pb-[-12px] justify-center ">
+        <div class="flex gap-1 w-auto p-6 shadow-sm shadow-slate-600 rounded-md bg-slate-800 cursor-pointer">
+            <img class="w-8" src="./playstore.png" alt="">
+            <span class="text-[12px]">GET IT ON<br>
+                <span class="text-[19px]">Google Play</span></span>
+        </div>
+        <div class="flex gap-1 w-[168.34px]  p-6 shadow-sm shadow-slate-600 rounded-md bg-slate-800 cursor-pointer">
+            <img class="w-8" src="./app-store.png" alt="">
+            <span class="text-[12px]">GET IT ON<br>
+                <span class="text-[19px]">App Store</span></span>
+        </div>
+    </div>
+
+    <!-- Sign Up -->
+
+    <div class="flex" id="two">
+        <button
+            class="mt-6 bg-[#ECC94B] text-black font-semibold h-auto p-2 md:w-[416px] rounded-xl  mx-auto hover:bg-[#d8b73d] w-60"><a
+                href="">SIGN UP</a></button>
+    </div>
+
+    <!-- Two IMages -->
+
+    <div class="md:mt-20 mt-10 md:flex md:flex-row flex flex-col gap-10 justify-center items-center" data-aos="fade-up">
+        <div class="md:w-[35vw] md:h-[460px] w-[80vw] bg-[#212c3a] border-[1px] border-[#2e3e54] p-4 rounded-xl">
+            <p class="text-3xl font-Noto pl-4">300+ cryptos to invest in for<br>your next big move</p>
+            <p class="text-[grey] pl-4">Invest in a range of cryptos,the easy way</p>
+            <img class="md:w-fit pt-12" src="./first_image.png" alt="">
+        </div>
+        <div class="md:w-[35vw] h-full w-[80vw] bg-[#212c3a] border-[1px] border-[#2e3e54] p-4 rounded-xl">
+            <p class="text-3xl font-Noto pl-4">India’s best prices, driven by highest liquidity</p>
+            <p class="text-[grey] pl-4">Swift transactions meet unmatched value.</p>
+            <img class="w-fit pt-12" src="./second_image.png" alt="">
+        </div>
+    </div>
+
+    <!-- KYC----24/7----Steamless -->
+
+    <div class="md:mt-20 mt-1 md:flex md:flex-row flex flex-col gap-10 justify-center items-center" data-aos="fade-up">
+        <div
+            class="flex flex-col gap-3 md:w-[25vw] w-[80vw] bg-[#212c3a] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <img class="w-10" src="./tick-mark.png" alt="">
+            <p class="text-xl">KYC - Swift & Compliant</p>
+            <p class="text-[grey] pl-2">Experience seamless onboarding with swift KYC processes, ensuring full
+                compliance with regulations.
+            </p>
+        </div>
+
+        <div
+            class="flex flex-col gap-3 md:w-[25vw] w-[80vw] bg-[#212c3a] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <img class="w-10" src="./24-hours.png" alt="">
+            <p class="text-xl">24/7 Support</p>
+            <p class="text-[grey] pl-2">Like a trusted friend, our 24/7 expert support is always there, making your
+                crypto investment journey smoother.
+            </p>
+        </div>
+
+        <div id="market"
+            class="flex flex-col h-[197.6px] gap-3 md:w-[25vw] w-[80vw] bg-[#212c3a] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <img class="w-10" src="./api.png" alt="">
+            <p class="text-xl">Flawless API Support</p>
+            <p class="text-[grey] pl-2">Amplify your crypto trading experience with Cryptex through seamless API
+                integration.
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Cards of the Crypto -->
+
+    <h1 class=" font-Roboto text-4xl md:text-5xl font-bold p-10 md:mt-12" data-aos="fade-up">Top Crypto Currencies</h1>
+
+    <div class="mt-15 md:flex md:flex-row flex flex-col gap-10 justify-center items-center" data-aos="fade-up">
+        <!-- Bitcoin -->
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./bitcoin.png" alt=""> <span class="font-semibold">Bitcoin</span> <span
+                    class="text-[grey]">BTC/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="bitcoin">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="bitcoinVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+
+
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./ethereum.png" alt=""> <span class="font-semibold">Ethereum</span> <span
+                    class="text-[grey]">ETH/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="ethereum">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="ethereumVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+
+
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./ripple.png" alt=""> <span class="font-semibold">Ripple</span> <span
+                    class="text-[grey]">XRP/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="ripple">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="rippleVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+
+        <!-- Solana -->
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./solana.png" alt=""> <span class="font-semibold">Solana</span> <span
+                    class="text-[grey]">SOL/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="solana">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="solanaVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+    </div>
+
+    <!-- Second Card -->
+    <div class="md:mt-16 mt-10 md:flex md:flex-row flex flex-col gap-10 justify-center items-center" data-aos="fade-up">
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./tether.png" alt=""> <span class="font-semibold">Tether</span> <span
+                    class="text-[grey]">USDT/USD</span>
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="tether">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="tetherVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+
+
+
+        <!-- Cardano -->
+
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./cardano.png" alt=""> <span class="font-semibold">Cardano</span> <span
+                    class="text-[grey]">ADA/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="cardano">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="carVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+
+        <!-- DogeCoin -->
+        <div class="md:w-[18vw] w-[70vw] bg-[#1c2027] border-[1px] border-[#2e3e54] p-4 rounded-xl items-center">
+            <div class="flex gap-1 p-1">
+                <img class="w-7" src="./dogecoin.png" alt=""> <span class="font-semibold">Doge Coin</span> <span
+                    class="text-[grey]">DOGE/USD</span>
+
+            </div>
+            <p class="text-[25px] font-Noto font-semibold p-1">USD <span id="doge">40000</span></p>
+            <p class="text-[white] p-1 text-[18px]" id="card">Volume : <span id="dogeVol"
+                    class="text-[grey]">300000</span></p>
+        </div>
+    </div>
+
+
+    <!-- YOur           Security        Matters -->
+
+    <div class="cards md:mt-20 mt-12 bg-[#0f1319]" data-aos="fade-up">
+        <div class="mx-auto w-fit text-2xl md:text-3xl font-semibold font-Roboto pt-14">
+            Your Security Matters
+        </div>
+
+        <div class="flex justify-center gap-4 md:gap-20 mt-6 md:flex-row flex-col items-center">
+            <div class="flex flex-col gap-3 md:w-[40vw] w-[80vw]  p-4 rounded-xl items-center">
+                <img class="w-10" src="./assets-digital.png" alt="">
+                <p class=" w-fit mx-auto text-2xl">Safekeeping Your Digital Assets</p>
+                <p class="text-[grey]  mx-auto w-fit text-center">We keep your digital assets safe with an extra layer
+                    of security.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-3 md:w-[40vw] w-[80vw]  p-4 rounded-xl items-center">
+                <img class="w-10" src="./phone.png" alt="">
+                <p class="text-2xl mx-auto w-fit">2 - Factor Authentication</p>
+                <p class="text-[grey]  mx-auto w-fit text-center">
+                    Double your WazirX account security with 2-factor authentication - choose the setup that suits you
+                    best.</p>
+            </div>
+        </div>
+
+        <!-- Second ONe -->
+        <div class="flex justify-center gap-4 md:gap-20 mt-6 md:flex-row flex-col items-center">
+            <div class="flex flex-col gap-3 md:w-[40vw] w-[80vw]  p-4 rounded-xl items-center">
+                <img class="w-10" src="./end-to-end.png" alt="">
+                <p class="mx-auto w-fit text-2xl">End-to-End Encryption</p>
+                <p class="text-[grey]  mx-auto w-fit text-center">We use advanced encryption and follow the highest
+                    industry
+                    standards, ensuring worry-free crypto trading and investment for you.
+                </p>
+            </div>
+
+            <div id="guidlines" class="flex flex-col gap-3 md:w-[40vw] w-[80vw]  p-4 rounded-xl items-center">
+                <img class="w-10" src="./search.png" alt="">
+                <p class="text-2xl mx-auto w-fit text-center">Transparency - Your Right to Know</p>
+                <p class="text-[grey]  mx-auto text-center">
+                    We don't just talk, we practice it. Explore our transparency reports, proof of reserves, and more,
+                    because informed users make better decisions.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guidlines -->
+
+    <div class="md:w-[70vw] w-[80vw] mx-auto bg-[#212c3a] rounded-2xl mt-14 p-12">
+        <div class="w-fit mx-auto text-3xl md:text-4xl font-Roboto">Your Quick Start Guide</div>
+        <div class="flex md:m-10 gap-12 md:flex-row flex-col md:mt-14 p-4">
+            <div>
+                <div>
+                    <img class="w-10 mx-auto" src="./number-1.png " alt="">
+                    <p class="w-fit mx-auto text-[22px]  font-Roboto py-2">Sign up on CryptEx</p>
+                    <p class="w-fit mx-auto text-center text-[grey]">Begin your CryptEx journey with a quick signup and
+                        smooth KYC verification process.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img class="w-10 mx-auto" src="./two.png " alt="">
+                    <p class="w-fit mx-auto text-[22px] font-Roboto py-2">Transfer Money to Wallet</p>
+                    <p class="w-fit mx-auto text-center text-[grey]">Deposit Money to your CryptEx Wallet with ease
+                        through our secure payment gateways.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img class="w-10 mx-auto" src="./number-3.png " alt="">
+                    <p class="w-fit mx-auto text-[22px]  font-Roboto py-2">Buy and Sell Crypto</p>
+                    <p class="w-fit mx-auto text-center text-[grey]">Buy, sell, and trade crypto effortlessly, and track
+                        seamlessly—all in one place.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:flex hidden gap-3 md:h-auto h-[120px] pt-7 md:pt-0  pb-[-12px] justify-center ">
+            <div
+                class="flex gap-1 md:w-auto w-[168.34px] md:p-6 p-4 md:h-auto  shadow-sm shadow-slate-600 rounded-md bg-slate-800 cursor-pointer">
+                <img class="md:w-8 w-6 " src="./playstore.png" alt="">
+                <span class="text-[12px] ">GET IT ON<br>
+                    <span class="text-[19px] ">Google Play</span></span>
+            </div>
+            <div
+                class="flex gap-1 w-[168.34px]  md:p-6 p-4 shadow-sm shadow-slate-600 rounded-md bg-slate-800 cursor-pointer">
+                <img class="w-8" src="./app-store.png" alt="">
+                <span class="text-[12px]">GET IT ON<br>
+                    <span class="text-[19px]">App Store</span></span>
+            </div>
+        </div>
+
+        <!-- Sign Up -->
+
+        <div class="flex" id="two">
+            <button id="About Us"
+                class="mt-6 bg-[#ECC94B] text-black font-semibold h-auto p-2 md:w-[416px] rounded-xl  mx-auto hover:bg-[#d8b73d] w-72"><a
+                    href="">SIGN UP</a></button>
+        </div>
+    </div>
+
+    <footer class="mt-12 w-full mx-auto bg-black ">
+        <div class="w-fit mx-auto">
+        <div class="h-auto w-auto pl-10 pt-2 md:pl-26 md:pt-2 flex p-8">
+            <img class="w-15 h-12" src="./logo.png" alt="logo was there">
+            <span class="font-Raleway text-3xl pt-1 pl-2">CryptEx</span>
+        </div>
+
+        <div class="flex md:gap-28 gap-4 md:flex-row flex-col">
+            <div class="flex flex-col gap-1">
+                <h2 class="text-xl font-Noto font-semibold">About</h2>
+                <a class="text-[#b1b1b1]" href="">Blog</a>
+                <a class="text-[#b1b1b1]" href="">Careers</a>
+                <a class="text-[#b1b1b1]" href="">Announcements</a>
+                <a class="text-[#b1b1b1]" href="">Media Assets</a>
+                <a class="text-[#b1b1b1]" href="">Terms Of Usage</a>
+                <a class="text-[#b1b1b1]" href="">Privacy Policy</a>
+                <a class="text-[#b1b1b1]" href="">AML & CFT Policy Statement</a>
+                <a class="text-[#b1b1b1]" href="">KYC & PMLA Policy
+                </a>
+            </div>
+            <div class="flex flex-col gap-1">
+                <h2 class="text-xl font-Noto font-semibold">Services</h2>
+                <a class="text-[#b1b1b1]" href="">Download</a>
+                <a class="text-[#b1b1b1]" href="">Corporate Account</a>
+                <a class="text-[#b1b1b1]" href="">Referral Program</a>
+                <a class="text-[#b1b1b1]" href="">Market Maker Program</a>
+                <a class="text-[#b1b1b1]" href="">WazirX API</a>
+                <a class="text-[#b1b1b1]" href="">List Your Coin</a>
+            </div>
+            <div class="flex flex-col gap-1">
+                <h2 class="text-xl font-Noto font-semibold">Support</h2>
+                <a class="text-[#b1b1b1]" href="">Help Center</a>
+                <a class="text-[#b1b1b1]" href="">Contact Us</a>
+                <a class="text-[#b1b1b1]" href="">Fees</a>
+                <a class="text-[#b1b1b1]" href="">Security</a>
+                <a class="text-[#b1b1b1]" href="">Terms Of Usage</a>
+                <a class="text-[#b1b1b1]" href="">Law Enforcement Request</a>
+                <a class="text-[#b1b1b1]" href="">What Is Bitcoin</a>
+            </div>
+            <div class="flex flex-col gap-1 font-semibold">
+                <h2 class="text-xl font-Noto">Buy Crypto</h2>
+                <a class="text-[#b1b1b1]" href="">Buy Crypto</a>
+                <a class="text-[#b1b1b1]" href="">Buy Ethereum</a>
+                <a class="text-[#b1b1b1]" href="">Buy Solana</a>
+                <a class="text-[#b1b1b1]" href="">Buy Ripple</a>
+                <a class="text-[#b1b1b1]" href="">Buy DogeCoin</a>
+                <a class="text-[#b1b1b1]" href="">Buy Tether</a>
+                <a class="text-[#b1b1b1]" href="">Buy Cardano</a>
+                <a class="text-[#b1b1b1]" href="">Buy Doge Coin
+                </a>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <h2 class="text-xl font-Noto font-semibold">Socials</h2>
+                <a class="text-[#dddbdb]" href=""><span><img class="w-[30px] inline p-1" src="./twitter (1).png" alt=""></span>Twitter</a>
+                <a class="text-[#dddbdb]" href=""><span><img class="w-[30px] inline p-1" src="./instagram.png" alt=""></span>Instagram</a>
+                <a class="text-[#dddbdb]" href=""><span><img class="w-[30px] inline p-1" src="./linkedin.png" alt=""></span>Linked In</a>
+                <a class="text-[#dddbdb]" href=""><span><img class="w-[30px] inline p-1" src="./telegram.png" alt=""></span>Telegram</a>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- JavaScript Code For Typed And Aos Features !!!! -->
+
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Js Typed -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Bitcoin', 'Ethereum', 'Ripple', 'Solana', 'Tether', 'Doge Coin', 'Cardano'],
+            typeSpeed: 70,
+        });
+    </script>
+</body>
+
+</html>
