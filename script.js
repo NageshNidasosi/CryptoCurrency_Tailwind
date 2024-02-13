@@ -2,7 +2,7 @@
 function toggleMenu(e){
 const nav=document.querySelector(".navLinks")
 e.name=e.name == 'grid-outline'?'close':'grid-outline'
-nav.classList.toggle("top-[9.5%]")
+nav.classList.toggle("top-[7%]")
 }
 // Variables used for Crypto API Purposes
 let bit=document.getElementById("bitcoin")
